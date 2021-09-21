@@ -20,7 +20,7 @@ namespace Calculador
             double r,h;
             r = double.Parse(textBoxVCR1.Text);
             h = double.Parse(textBoxVCA1.Text);
-            textBoxVCono.Text = "Volúmen: " + Convert.ToString(obj3.vcono(r,h));
+            textBoxVCono.Text = "Volumen: " + Convert.ToString(obj3.vcono(r,h));
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -29,7 +29,7 @@ namespace Calculador
             double h, r;
             h = double.Parse(textBoxVCA2.Text);
             r = double.Parse(textBoxVCR2.Text);
-            textBoxVCilindro.Text = "Volúmen: " + Convert.ToString(obj3.vcilindro(r, h));
+            textBoxVCilindro.Text = "Volumen: " + Convert.ToString(obj3.vcilindro(r, h));
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -37,12 +37,17 @@ namespace Calculador
             cVolumenes obj3 = new cVolumenes();
             double r;
             r = double.Parse(textBoxVER.Text);
-            textBoxVEsfera.Text = "Volúmen: " + Convert.ToString(obj3.vesfera(r));
+            textBoxVEsfera.Text = "Volumen: " + Convert.ToString(obj3.vesfera(r));
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void textBoxVCono_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

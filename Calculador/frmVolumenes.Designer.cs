@@ -31,11 +31,13 @@ namespace Calculador
         {
             this.button3 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.textBoxVEsfera = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.textBoxVER = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.textBoxVCA2 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxVCilindro = new System.Windows.Forms.TextBox();
@@ -43,21 +45,19 @@ namespace Calculador
             this.textBoxVCR2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button4 = new System.Windows.Forms.Button();
             this.textBoxVCA1 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.textBoxVCono = new System.Windows.Forms.TextBox();
             this.textBoxVCR1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // button3
@@ -83,6 +83,15 @@ namespace Calculador
             this.groupBox3.TabIndex = 10;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Esfera";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::Calculador.Properties.Resources.VEsfera;
+            this.pictureBox3.Location = new System.Drawing.Point(6, 22);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(194, 144);
+            this.pictureBox3.TabIndex = 10;
+            this.pictureBox3.TabStop = false;
             // 
             // textBoxVEsfera
             // 
@@ -133,6 +142,15 @@ namespace Calculador
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Cilindro";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Calculador.Properties.Resources.VCilindro;
+            this.pictureBox2.Location = new System.Drawing.Point(6, 22);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(194, 144);
+            this.pictureBox2.TabIndex = 9;
+            this.pictureBox2.TabStop = false;
             // 
             // textBoxVCA2
             // 
@@ -200,6 +218,15 @@ namespace Calculador
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Cono";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Calculador.Properties.Resources.VCono;
+            this.pictureBox1.Location = new System.Drawing.Point(6, 22);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(194, 144);
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
+            // 
             // button4
             // 
             this.button4.Location = new System.Drawing.Point(29, 267);
@@ -233,6 +260,7 @@ namespace Calculador
             this.textBoxVCono.ReadOnly = true;
             this.textBoxVCono.Size = new System.Drawing.Size(159, 23);
             this.textBoxVCono.TabIndex = 3;
+            this.textBoxVCono.TextChanged += new System.EventHandler(this.textBoxVCono_TextChanged);
             // 
             // textBoxVCR1
             // 
@@ -250,33 +278,6 @@ namespace Calculador
             this.label1.TabIndex = 0;
             this.label1.Text = "Radio";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Calculador.Properties.Resources.VCono;
-            this.pictureBox1.Location = new System.Drawing.Point(6, 22);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(194, 144);
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Calculador.Properties.Resources.VCilindro;
-            this.pictureBox2.Location = new System.Drawing.Point(6, 22);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(194, 144);
-            this.pictureBox2.TabIndex = 9;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::Calculador.Properties.Resources.VEsfera;
-            this.pictureBox3.Location = new System.Drawing.Point(6, 22);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(194, 144);
-            this.pictureBox3.TabIndex = 10;
-            this.pictureBox3.TabStop = false;
-            // 
             // frmVolumenes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -290,13 +291,13 @@ namespace Calculador
             this.Text = "Calculando Volúmenes";
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
